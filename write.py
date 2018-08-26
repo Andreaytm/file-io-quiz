@@ -1,3 +1,4 @@
 f = open('newfile.txt', 'a')
-f.write("Hello\n")
+lines = ['Hello', 'World', 'Welcome', 'To', 'File IO']
+f.writelines(lines)
 f.close()
