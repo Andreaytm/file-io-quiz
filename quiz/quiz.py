@@ -14,7 +14,7 @@ def ask_questions():
         lines = file.read().splitlines()
         
     for i, text in enumerate(lines):
-        if i%2 ==0:
+        if i%2 == 0:
             questions.append(text)
         else:
             answers.append(text)
@@ -28,10 +28,10 @@ def ask_questions():
         guess= input(question + "> ")
         if guess == answer:
             score += 1
-            print("right!")
+            print("Right!")
             print(score)
         else:
-            print("wrong!")
+            print("Wrong!")
             
     print("You got {0} correct out of {1}" .format(score, number_of_questions))
     
@@ -42,9 +42,9 @@ def add_question():
     
     print("")
     print("Ok then, tell me the answer")
-    answer=input("{0}\n> ".format(question))
+    answer = input("{0}\n> ".format(question))
     
-    file=open("questions.txt", "a")
+    file = open("questions.txt", "a")
     file.write(question + "\n")
     file.write(answer + "\n")
     file.close()
@@ -52,11 +52,11 @@ def add_question():
 def game_loop():
     while True:
         option = show_menu()
-        if option =="1":
+        if option == "1":
             ask_questions()
         elif option == "2":
             add_question()
-        elif option =="3":
+        elif option == "3":
             print("Thank you for playing! Goodbye!")
             break
         else:
