@@ -57,6 +57,7 @@ def game_loop():
         elif option == "2":
             add_question()
         elif option =="3":
+            print("Thank you for playing! Goodbye!")
             break
         else:
             print("Invalid option")
